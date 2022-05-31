@@ -71,3 +71,38 @@ void sorting::output(){
       cout<<"\t\t\t"<<"-------------------------------------------------------------------"<<endl;
                
 			    for(b=0;b<n;b++){
+cout<<"\t\t\t"<<"|      "<<barang[b].kode<<"\t\t"<<barang[b].nama<<"\t\t"<<barang[b].stock<<"\t\t""       |"<<endl;
+
+                     }
+        cout<<"\t\t\t"<<"-------------------------------------------------------------------"<<endl;
+	    cout<<endl;
+        cout<<"\t\t\t"<<"Masukan Kode Barang Untuk Mencari : ";
+        cin>>cari;
+        ada = 0;
+        for(b=0;b<n;b++)
+            {
+            if(barang[b].kode==cari)
+                {
+                    ada=1;
+              		cout<<"\t\t\t"<<"-------------------------------------------------------------------"<<endl;
+                    cout<<"\t\t\t"<<"|      Nama Barang     |       Stock Barang    | "<<endl;
+                   	cout<<"\t\t\t"<<"-------------------------------------------------------------------"<<endl;
+                    cout<<"\t\t\t"<<"|         "<<barang[b].nama<<"\t\t        "<<barang[b].stock<<"\t\t       "<<"        |"<<endl;
+					 }
+           }
+                    cout<<"\t\t\t"<<"-------------------------------------------------------------------"<<endl;
+        if (ada == 0)
+           {
+                cout<<"Data Tidak ditemukan"<<endl;
+            }
+        return 0;
+                    }
+                    
+int main(){
+cout <<"Studi Kasus Program Sorting dan Searching \n";
+  sorting cek;
+  cek.input();
+  cek.proses();
+  cek.output();
+  return 0;
+}
