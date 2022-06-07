@@ -30,3 +30,12 @@ void array::proses(){
   jtb2 = tb2 / 3;
   jtb3 = tb3 / 3;
 }
+
+int main() {
+  cout << "Studi Kasus Program Kelulusan Mahasiswa \n";
+  array cek;
+  cek.input();
+  cek.proses();
+  cek.output();
+  return 0;
+}
