@@ -35,6 +35,7 @@ cout<<"Input Nama Barang: ";
 cin>>(barang[i].nama);
 cout<<"Input Stock Barang : ";
 cin>>barang[i].stock;
+
 cout<<endl;
 
 }
@@ -63,13 +64,6 @@ void sorting::proses(){
 
 void sorting::output(){
   cout<<endl;
-  cout<<"\t\t\t"<<"Data Barang Anda"<<endl;
-
-      cout<<"\t\t\t"<<"-------------------------------------------------------------------"<<endl;
-
-      cout<<"\t\t\t"<<"|   Kode Barang  |  Nama Barang  | Stock Barang |"<<endl;
-
-      cout<<"\t\t\t"<<"-------------------------------------------------------------------"<<endl;
   
         cout<<"\t\t\t"<<"Setelah data diurutkan berdasarkan kode terkecil : "<<endl;
       cout<<"\t\t\t"<<"-------------------------------------------------------------------"<<endl;
@@ -77,8 +71,7 @@ void sorting::output(){
       cout<<"\t\t\t"<<"-------------------------------------------------------------------"<<endl;
                
 			    for(b=0;b<n;b++){
-
-        cout<<"\t\t\t"<<"|      "<<barang[b].kode<<"\t\t"<<barang[b].nama<<"\t\t"<<barang[b].stock<<"\t\t""       |"<<endl;
+cout<<"\t\t\t"<<"|      "<<barang[b].kode<<"\t\t"<<barang[b].nama<<"\t\t"<<barang[b].stock<<"\t\t""       |"<<endl;
 
                      }
         cout<<"\t\t\t"<<"-------------------------------------------------------------------"<<endl;
