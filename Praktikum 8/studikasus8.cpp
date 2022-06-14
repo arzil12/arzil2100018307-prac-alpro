@@ -30,3 +30,45 @@ void array::proses(){
   jtb2 = tb2 / 3;
   jtb3 = tb3 / 3;
 }
+void array::output(){ 
+	cout<<"______________________________________________________________________________________________________________________"<<endl;
+    cout<<"| Tahun Prodi | Teknik Komputer | Teknik Elektro | Teknik Pemesanan | Rata-rata kelulusan per tahun dari semua prodi |"<<endl;
+ 	cout<<"| 2015 |"; 
+  for (i = 0;i < 1; i++){
+		for ( j = 0; j < 3; j++){
+			
+			cout << a[i][j] << " |";
+		}
+	}
+	cout<<" "<<jtk1<<"|"<<endl;
+	cout<<"| 2016 |";
+  for (i = 1;i < 2; i++){
+		for ( j = 0; j < 3; j++){
+			
+			cout << a[i][j] << " |";
+		}
+	}
+	cout<<" "<<jtk2<<"|"<<endl;
+	
+	cout<<"| 2017 |";
+  for (i = 2;i < 3; i++){
+		for ( j = 0; j < 3; j++){
+			
+			cout << a[i][j] << " |";
+		}
+	}
+  	cout<<" "<<jtk3<<"|"<<endl;
+	
+
+  cout<<"| Rata-rata pertahun per prodi|"<<" "<<jtb1<<"|"<<jtb2<<"|"<<jtb3<<"|";
+  
+  
+}
+int main() {
+  cout << "Studi Kasus Program Kelulusan Mahasiswa \n";
+  array cek;
+  cek.input();
+  cek.proses();
+  cek.output();
+  return 0;
+}
