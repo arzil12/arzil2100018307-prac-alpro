@@ -53,3 +53,54 @@ int matriks::tampil(){
 	}
 	cout<<endl;
 }
+int matriks::bubble_sort(){
+	for (int i=1; i<n;i++){
+		for (int j=n-1; j>=i;j--){
+			if (ar2[j]<ar2[j-1]){
+				tukar(j , j-1);
+			}
+		}
+		cout<<"Menampilkan array hasil sorting: "<<endl;
+		tampil();
+	}
+	cout<<endl;
+}
+
+int matriks::kembali(){
+  for( i=0;i<4;i++){
+             for( j=0;j<5;j++){
+                     ar3[i][j]=ar2[d];
+					 d++;
+                     }
+                     }
+}
+
+int matriks::output(){
+  cout<<"Matriks 2 dimensi sebelum diurutkan:"<<endl;
+  for( i=0;i<4;i++){
+             for( j=0;j<5;j++){
+                     cout<<ar1[i][j]<<" ";
+  }
+   cout<<endl;
+   }
+   cout<<endl;
+  cout<<"Matriks 2 dimensi setelah diurutkan:"<<endl;
+ for(int i=0;i<4;i++){
+             for(int j=0;j<5;j++){
+                     cout<<ar3[i][j]<<" ";
+  }
+   cout<<endl;
+   }
+  
+  }
+
+int main(){
+	cout<<"===Studi kasus tentang array 1 dimensi 2 dimensi==="<<endl;
+  matriks cek;
+  cek.input();
+  cek.dimensi1();
+  cek.bubble_sort();
+  cek.kembali();
+  cek.output();
+  return 0;
+}
