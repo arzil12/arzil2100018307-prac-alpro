@@ -24,3 +24,53 @@ class pointer{
 void clrscr(){
  system("cls");
 }
+void pointer::pilih(){
+  do{
+  //clrscr();
+  cout << "MENU SINGLE  LINKEDLIST" << endl;
+  cout << "1. Tambah Depan" << endl;
+  cout << "2. Tambah Belakang" << endl;
+  cout << "3. Tampil" << endl;
+  cout << "4. Selesai" << endl;
+  cout << "Pilihan anda: ";
+  cin>>pil;
+  
+ if(pil==1){
+  tambah_depan();
+ }
+ else if(pil==2){
+  tambah_belakang();
+ }
+ else if(pil==3){
+  output();
+ }}while (pil!=4);
+ cout<<"Program telah selesai";
+}
+
+
+
+void pointer::input(){
+ baru=(simpul*)malloc(sizeof(struct simpul));
+ cout << "Input NIM : ";
+ cin >> baru->nim;
+ cout << "Input Nama : ";
+ cin >>baru->nama;
+ baru->next=NULL;
+}
+  
+
+
+void pointer::tambah_depan(){
+	input();
+ if(awal==NULL){
+  awal=baru;
+  akhir=baru;
+  akhir->next=NULL;
+ }
+ else{
+  baru->next=awal;
+  awal=baru;
+ }
+ cout << endl << endl;
+ output();
+}
