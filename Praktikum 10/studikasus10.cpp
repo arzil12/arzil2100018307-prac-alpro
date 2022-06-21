@@ -74,3 +74,41 @@ void pointer::tambah_depan(){
  cout << endl << endl;
  output();
 }
+void pointer::tambah_belakang(){
+ input();
+ if(awal==NULL){
+  awal=baru;
+ }
+ else{ 
+  akhir->next=baru;
+ }
+ akhir=baru;
+ akhir->next=NULL;
+ cout << endl << endl;
+ output();
+}
+
+void pointer::output(){
+if(awal==NULL){
+  cout << "Kosong";
+ }
+ else{
+  bantu=awal;
+  while(bantu!=NULL){
+  cout << "NAMA : " << bantu->nama << endl;
+  cout << "NIM : " << bantu->nim << endl;
+     bantu=bantu->next;
+  }
+ }
+ getch();
+}
+
+
+
+int main(){
+	int pil;
+	pointer x;
+	x.pilih(); 
+ 
+ return 0;
+}
